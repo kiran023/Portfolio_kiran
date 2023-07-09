@@ -1,0 +1,517 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:ital,wght@0,400;0,500;0,700;1,600&family=Ubuntu:wght@300;400&display=swap');
+
+ 
+*{
+ 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+
+}
+ion-icon{
+  color: #343637;
+}
+
+body.dark{
+  background-color: #343637;
+  color: white;
+}
+body.dark #about-gif>img{
+
+  box-shadow: rgb(57, 134, 217) 0px 20px 30px -10px;
+}
+#nav-menu.dark{
+  background-color: #65696b;
+  color: white;
+}
+#contact.dark{
+  background-color: #65696b;
+  color: white;
+}
+
+
+/*======= Navigation part======= */
+
+#nav-menu{
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  position: fixed;
+  z-index: 1;
+  padding: 15px;
+  width:100%;
+  top: 0px;
+  background-color: #45a39f;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+#nav-menu div{
+  display: flex;
+
+}
+
+#logo-name{
+  top: -8px;
+  /* position: absolute; */
+  width: 80px;
+  
+}
+#hamburger{
+  display: none;
+  font-size: 40px;
+  z-index: 1;     
+  margin-left:20px;
+  color: white;
+ 
+  
+}
+.resumeBtn{
+  padding: 8px;
+  border: 0px;   
+  border-radius: 5px;
+  background-color:#790252 ;
+  
+  color: white;
+  font-weight: bolder;
+  transition: transform .5s;
+}
+.resumeBtn:hover{
+  /* box-shadow:rgb(42, 216, 170) 0px 0px 0px 3px; */
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+
+nav a{
+  /* color: #000000; */
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#nav-menu .menu li{
+  padding-left: 10px;
+  list-style: none;
+  display: inline-block;
+}
+#nav-menu .menu li :hover{
+  border-bottom:solid  #426cf5;
+ 
+}
+.lightmode{
+  cursor: pointer;
+  display: none ;
+  color: white;    
+  background-color: rgb(57, 134, 217);
+  border-radius: 15px;
+  font-size: 20px;
+  padding: 5px;
+  margin-left: 8px;
+  /* margin-bottom: -8px; */
+}
+.lightmode.activate{
+  display: block ;
+}
+.darkmode{
+  cursor: pointer;
+  color:rgb(24, 24, 24) ;
+  display: none ;
+  font-size: 20px;
+  background-color: #b2b4b5eb;
+  border-radius: 15px;
+  padding: 5px;
+  margin-left: 8px;
+  /* margin-bottom: -8px; */
+}
+.darkmode.activate{
+  display: block  ;
+  
+  
+}
+
+/*====== Hamburger Menu======== */
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(45%);
+  }
+}
+
+.menu-icon {
+  display: none;
+  font-size: 55px;
+  margin-right: -210px;
+ 
+}
+
+.menu-icon:hover {
+  color: #00A1E0;
+}
+
+.menu-page {
+  background-color:#232e42;  
+  top: 9%;
+  position: fixed;
+  z-index: 1;
+  width: 70%;
+  height: 100%;
+  padding: 20px;
+  display: none;
+  
+ animation: slideInLeft .5s ease-in-out 0s 1 normal forwards;
+ 
+}
+
+.menu-page.activate {
+  display: block;
+  transform:translateX(45%);
+
+}
+
+.menu-page li {
+  list-style: none;;
+
+  text-align: center;
+  margin: 20px 0 40px 0;
+}
+
+.menu-page a{
+  color: white;
+  font-size:25px;
+}
+.menu-page a:hover{
+  border-bottom: solid #00A1E0;
+}
+
+/*========= Home section======== */
+
+#home{
+  position:relative;   
+  width: 100%;   
+  margin: auto;
+}
+
+#intro{    
+  display: flex;
+  /* justify-content: space-around; */
+  margin: 100px 0 150px 0 ;
+
+}
+#about-gif{
+  display:flex ;
+  justify-content: center;
+  width: 40%;
+
+}
+#about-gif>img{
+  width: 640px;
+}
+.social_media_icon{
+  font-size: 45px;
+  transition: transform 0.5s;
+}
+.social_media_icon:hover{
+  transform: scale(1.3);
+  /* color: #426cf5; */
+  box-shadow: rgba(13, 186, 209, 0.776) 0px 0px 0px 3px;
+  border-radius: 5px
+}
+.text{
+  width: 50%;
+  /* border: solid red; */
+  padding: 80px;
+  font-size: 70px;
+  font-weight: 10;
+  line-height: 90px;
+}
+
+.title{
+  font-size: 40px;
+  display: block;
+  margin: 30px 0 30px 0;
+  line-height: 60px;
+  text-align: center;
+  border-bottom:solid #2d2b2bb5; 
+  border-bottom-width: thin;
+  color: #4D455D;
+
+}
+
+#user-detail-name{
+  color: #790252;
+}
+
+
+/*=========== About Section=========== */
+
+#about-card{
+  display: flex;
+  justify-content: space-between;
+}
+/* #about-card div:nth-child(1){
+  
+} */
+#about{
+  width: 90%;
+  margin: auto;
+}
+#skills{
+  width: 90%;
+  margin: auto;
+}
+#github{
+  width: 85%;
+  margin: auto;
+}
+#user-detail-intro{
+  text-align: justify;
+  width: 75%;
+  font-size: larger;
+  margin: 40px 20px 0 40px;
+}
+
+
+.home-img {
+  width: 250px;
+  border-radius:50px;
+  margin: 40px 0 0 0;
+  /* box-shadow: rgb(57, 134, 217) 0px 20px 30px -10px; */
+  transition: transform .5s;
+}
+.home-img:hover{
+  box-shadow: rgba(13, 186, 209, 0.776) 0px 0px 0px 3px;
+  transform: scale(1.06);
+ 
+}
+#resume-link-2 button{
+  margin:40px 0 0 40px;
+  padding: 10px;
+  font-size: larger;
+}
+
+/*=============== Skill section============ */
+#skills_container{
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap: 30px;
+
+}
+#skills_container div{    
+  border-radius: 10px;
+  padding: 10px;
+  /* box-shadow: rgb(57, 134, 217) 0px 20px 30px -10px; */
+  /* box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px; */
+  text-align: center;    
+  transition: transform .4s;
+}
+#skills_container div:hover{
+  /* box-shadow: rgb(42, 216, 170) 0px 0px 0px 3px; */
+  /* background-color: aliceblue; */
+  transform: scale(1.1)
+}
+#skills img{
+  width: 70px;
+  height: 80px;
+}
+
+/* =======Projects =====*/
+.project__container {
+display: grid;  
+grid-template-columns: repeat(3,1fr);
+gap: 20px;
+
+}
+
+.project-card { 
+box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+border-radius: .5rem;
+overflow: hidden;
+/* box-shadow: rgb(57, 134, 217) 0px 20px 30px -10px; */
+transition: transform .5s;
+}
+
+.project-card:hover{
+transform: scale(1.03);
+/* box-shadow: rgba(13, 186, 209, 0.659) 0px 0px 0px 3px; */
+}
+
+.project-title{
+color: #426cf5;
+margin: 10px 0 10px 0;
+}
+
+.project-tech-stack{
+margin: 10px 0 10px 0;
+}
+
+.project__container img {
+  width:  100%;
+  padding: 5px;
+  border-radius: 5px;
+  /* height: 280px; */
+  /* object-fit: cover; */
+}
+
+
+.project-card img {
+  transition: 1s;
+}
+.project-card img:hover {
+  transform: scale(1.1);
+ 
+}
+.project_details {
+  padding: 20px;
+  /* border: solid red; */
+}
+.project-github-link{
+color: black;
+font-size: 30px;
+}
+.project-deployed-link{
+margin-left: 20px;
+color: black;
+font-size: 30px;
+}
+.logo{
+  width: 60px;
+
+}
+
+
+/*======== Github section========= */
+
+#github-top-langs , #github-stats-card , #github-streak-stats{
+  width: 340px;
+  /* border: solid red; */
+}
+
+
+/* =========Footer part========== */
+
+#contact{ 
+  /* display: flex; */
+  margin-top: 20px;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  background-color:  #232e42;;   
+  line-height: 30px;
+  
+}
+#contact ion-icon{
+  color: white;
+}
+#contact a{
+  color: white;
+}
+
+
+#socialMedia{
+  display: flex;
+  padding: 50px;
+  width: 60%;
+  margin: auto;
+  text-align: center;   
+  justify-content: space-around;
+}
+.logo{
+  color: #ffff;
+  font-size: 25px;
+  font-weight: 600;   
+}
+
+
+ /* Medium Screen Media Query */
+ @media screen and (min-width:850px) and (max-width:1120px) {
+  .text1,#user-detail-name{
+    font-size: 55px;
+   
+  }
+  .project__container{
+    grid-template-columns: repeat(2,1fr);
+  }
+  #about-gif img{
+    width: 350px;
+  }
+}
+/*===== Small Screen===== */
+@media screen and (min-width:320px) and (max-width:850px) {
+  #hamburger{
+    display: block;
+    /* z-index: 1;  */
+    /* border: solid red; */
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .menu{
+    display: none;
+  }
+  #intro{
+    flex-direction: column-reverse;      
+    margin-top: 80px;
+    margin-bottom: 0;
+  }
+  #about-gif img{
+   /* margin-left: 25%; */
+    width: 320px;
+    height: 220px;
+    /* margin-bottom: 40px; */
+    margin: 60px 0 60px 0;
+    /* border: solid red; */
+  }
+  .text{
+    width: 100%;
+    text-align: center;
+    font-size: 55px;
+    /* border: solid red; */
+  
+  }
+  #resume-link-2 button{
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+#user-detail-intro{
+  width: 100%;
+  margin: 0;
+}
+.home-img{
+  /* border: solid red; */
+  display: block;
+  margin: auto;
+}
+  #about-card{
+    flex-direction: column;
+  }
+  #skills_container{
+    grid-template-columns: repeat(3,1fr);
+  }
+  .project__container{
+    grid-template-columns: repeat(1,1fr);
+    margin: 15px;
+  }
+  #github-top-langs , #github-stats-card , #github-streak-stats{
+    width: 300px;
+    /* border: solid red; */
+  }
+  #socialMedia{
+    flex-direction: column;
+  }
+  #home{
+    width: 90%;
+  }
+  #typing-effect{
+    display: none;
+  }
+}

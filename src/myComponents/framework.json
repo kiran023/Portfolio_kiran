@@ -1,0 +1,38 @@
+[
+    {
+        "id":1,
+        "name":"HTML5",
+        "img":"https://cdn.worldvectorlogo.com/logos/html-1.svg"
+
+    },
+    {
+        "id":2,
+        "name":"CSS3",
+        "img":"https://cdn.worldvectorlogo.com/logos/css-3.svg"
+
+    },
+    {
+        "id":3,
+        "name":"Javascript",
+        "img":"https://cdn.worldvectorlogo.com/logos/javascript-1.svg"
+
+    },
+    {
+        "id":4,
+        "name":"React.js",
+        "img":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
+
+    },
+    {
+        "id":5,
+        "name":"Node.js",
+        "img":"https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg"
+
+    },
+    {
+        "id":6,
+        "name":"SQL",
+        "img":"https://logoeps.com/wp-content/uploads/2012/03/mysql-vector1.jpg"
+
+    }
+]
